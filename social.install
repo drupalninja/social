@@ -5,7 +5,20 @@
  * Install, update and uninstall functions for the Social module.
  */
 
+ use Drupal\user\Entity\Role;
+ use Drupal\user\RoleInterface;
+
+ /**
+  * Implement hook_install().
+  */
 function social_install() {
-  $storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
-  $view_display = $storage->load('user.user.default');
+  // Giver anonymous users permission to view the user profile.
+  $anonymous_role = Role::load(RoleInterface::ANONYMOUS_ID);
+  $anonymous_role->grantPermission('access user profiles');
+  $anonymous_role->save();
+
+  // Giver authenticated users permission to view the user profile.
+  $authenticated_role = Role::load(RoleInterface::AUTHENTICATED_ID);
+  $authenticated_role->grantPermission('access user profiles');
+  $authenticated_role->save();
 }
