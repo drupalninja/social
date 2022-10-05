@@ -1,0 +1,11 @@
+name: Social
+type: module
+description: Social media features for Drupal.
+package: Social
+core: '8.x'
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - ckeditor_mentions:ckeditor_mentions
+  - flag:flag
+  - maxlength:maxlength

@@ -1,0 +1,25 @@
+uuid: 585c0f6a-7767-46b7-9ea1-54a5a8d7439f
+langcode: en
+status: true
+dependencies:
+  module:
+    - social
+    - system
+  theme:
+    - olivero
+id: timeline
+theme: olivero
+region: content
+weight: 99
+provider: null
+plugin: social_timeline
+settings:
+  id: social_timeline
+  label: Timeline
+  label_display: visible
+  provider: social
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user*'

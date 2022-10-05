@@ -1,0 +1,20 @@
+uuid: a224b1cd-7897-48d4-88a2-f221f800bcfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - user
+id: user.field_posts
+field_name: field_posts
+entity_type: user
+type: comment
+settings:
+  comment_type: posts
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

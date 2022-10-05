@@ -1,0 +1,8 @@
+uuid: be94b2e5-9444-4b30-a84b-37a4fda61872
+langcode: en
+status: true
+dependencies: {  }
+id: posts
+label: Posts
+target_entity_type_id: user
+description: 'Short user posts that will appear on their timeline.'

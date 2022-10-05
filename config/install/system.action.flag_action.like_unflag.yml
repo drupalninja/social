@@ -1,0 +1,15 @@
+uuid: ace47400-ad43-4a98-9499-2c0689e1c5c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.like
+  module:
+    - flag
+id: flag_action.like_unflag
+label: 'Like this comment'
+type: comment
+plugin: 'flag_action:like_unflag'
+configuration:
+  flag_id: like
+  flag_action: unflag

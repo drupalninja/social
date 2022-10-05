@@ -1,0 +1,34 @@
+uuid: fd1095ea-84f4-4e52-adac-85d711b93662
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.posts
+    - field.field.comment.posts.comment_body
+  module:
+    - maxlength
+    - text
+id: comment.posts.default
+targetEntityType: comment
+bundle: posts
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+hidden:
+  subject: true

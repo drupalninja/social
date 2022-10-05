@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Social module.
+ */
+
+function social_install() {
+  $storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
+  $view_display = $storage->load('user.user.default');
+}
