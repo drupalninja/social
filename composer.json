@@ -97,5 +97,10 @@
                 "drush.services.yml": "^11"
             }
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }
