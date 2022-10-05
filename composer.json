@@ -1,6 +1,7 @@
 {
     "name": "drupalninja/social",
     "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
     "repositories": [
         {
             "type": "composer",
