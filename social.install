@@ -12,13 +12,26 @@
   * Implement hook_install().
   */
 function social_install() {
-  // Giver anonymous users permission to view the user profile.
-  $anonymous_role = Role::load(RoleInterface::ANONYMOUS_ID);
-  $anonymous_role->grantPermission('access user profiles');
-  $anonymous_role->save();
+  // Permissions we would like to add to authenticated and anonymous users.
+  $permissions = [
+    'access user profiles',
+    'flag following',
+    'flag like',
+    'unflag following',
+    'unflag like',
+  ];
 
-  // Giver authenticated users permission to view the user profile.
+  // Load user roles.
+  $anonymous_role = Role::load(RoleInterface::ANONYMOUS_ID);
   $authenticated_role = Role::load(RoleInterface::AUTHENTICATED_ID);
-  $authenticated_role->grantPermission('access user profiles');
+
+  // Add the permissions to the anonymous and authenticated roles.
+  foreach ($permissions as $permission) {
+    $anonymous_role->grantPermission($permission);
+    $authenticated_role->grantPermission($permission);
+  }
+
+  // Save roles.
+  $anonymous_role->save();
   $authenticated_role->save();
 }
