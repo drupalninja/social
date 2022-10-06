@@ -1,5 +1,6 @@
 {
     "name": "drupalninja/social",
+    "description": "Twitter style social features for Drupal.",
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",
     "repositories": [
@@ -96,6 +97,11 @@
             "services": {
                 "drush.services.yml": "^11"
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
         }
     }
 }
