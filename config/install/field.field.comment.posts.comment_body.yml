@@ -11,7 +11,7 @@ id: comment.posts.comment_body
 field_name: comment_body
 entity_type: comment
 bundle: posts
-label: Comment
+label: Create a Post
 description: ''
 required: true
 translatable: true
