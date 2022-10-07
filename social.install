@@ -34,4 +34,20 @@ function social_install() {
   // Save roles.
   $anonymous_role->save();
   $authenticated_role->save();
+
+  // Save mentions settings.
+  $config = \Drupal::configFactory()->getEditable('editor.editor.basic_html');
+  $mentions_settings = [
+    'enable' => TRUE,
+    'mentions_type' => 'user',
+    'charcount' => 2,
+    'timeout' => 500,
+    'marker' => '@',
+    'use_advanced_pattern' => FALSE,
+    'pattern' => '',
+    'advanced_pattern' => '',
+  ];
+
+  $config->set('settings.plugins.mentions', $mentions_settings);
+  $config->save();
 }
