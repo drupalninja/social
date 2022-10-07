@@ -3,7 +3,7 @@ This composer feature configures user profile pages to act like user timelines,
 similar to Twitter and other social media applications.
 
 Read full tutorial:
-https://medium.com/@jrcallicott/create-a-twitter-style-application-in-drupal-8207e4aaef96
+https://medium.com/@drupalninja/create-a-twitter-style-application-in-drupal-8207e4aaef96
 
 ## Key Features
 - User timeline with short posts
